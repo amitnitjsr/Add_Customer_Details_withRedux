@@ -9,10 +9,12 @@ import App from './Container/home/App';
 import Customer from './Container/Customer';
 import AddCustomer from './Container/Customer/Add';
 import PageNotFound from './Container/PageNotFound';
+import Navbar from './Container/Navbar/Navbar';
 
 const routes = (props) => {
     return (
         <Router>
+            <Navbar />
             <Switch>
                 <Route
                     exact

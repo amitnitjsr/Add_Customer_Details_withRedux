@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
@@ -39,6 +39,9 @@ const AddEdit = (props) => {
     const [nameVal, setNameVal] = useState(true);
     const [pswVal, setpswVal] = useState(true);
 
+    const saveHandler = () => {
+
+    }
     const handlePasswordValidation = () => {
 
         props.loginData.map((val) => {
@@ -72,7 +75,7 @@ const AddEdit = (props) => {
     };
 
     return (
-        <Container component="main" maxWidth="md">
+        <Container component="main" maxWidth="md" style={{ padding: '4%' }}>
             <div className={classes.paper}>
                 <form className={classes.form}>
                     <Row>
@@ -147,14 +150,12 @@ const AddEdit = (props) => {
                                 }}
                             /><br /><br />
 
-                            <Button style={{ backgroundColor: '#6384f9' }}
-                                onClick={() => handlePasswordValidation()}
-                                disabled={nameVal || pswVal}
+                            <Button style={{ backgroundColor: '#6384f9', width: '18%' }}
+                                onClick={() => saveHandler()}
                             >Add</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                             <Button style={{ backgroundColor: '#6384f9' }}
-                                onClick={() => handlePasswordValidation()}
-                                disabled={nameVal || pswVal}
+                                onClick={() => props.history.push('/customer')}
                             >Cancel</Button>
                             <br /><br />
                         </Col>
@@ -189,6 +190,6 @@ const AddEdit = (props) => {
 //     mapDispatchToProps
 // )(AddEdit);
 
-export default AddEdit;
+export default withRouter(AddEdit);
 
 

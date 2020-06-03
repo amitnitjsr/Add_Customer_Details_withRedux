@@ -1,14 +1,11 @@
 import React from 'react'
 import ReactTable from 'react-table';
 import IconButton from '@material-ui/core/IconButton';
-import { Row, Col, Button, Input } from 'reactstrap';
+import { Button } from 'reactstrap';
 import { withRouter } from 'react-router';
-
 import { connect } from "react-redux";
 import Data from '../../../asset/data/data'
-
 import './Table.css';
-
 
 class Table extends React.Component {
     constructor(props) {
@@ -20,74 +17,59 @@ class Table extends React.Component {
 
     render() {
         return (
-
-            <div >
-
+            <div style={{ padding: '5%' }}>
+                <Button style={{
+                    left: ' 2%',
+                    position: 'relative'
+                }}
+                    onClick={() =>
+                        this.props.history.push(
+                            '/customer/new'
+                        )}
+                >
+                    <i className="zmdi zmdi-account-add zmdi-hc-lg"></i>&nbsp;
+                    Add Customer
+                </Button>
                 <ReactTable
                     data={Data ? Data : []}
                     columns={[
                         {
                             Header: () => <div className="ID">S. No.</div>,
                             accessor: 'id',
-                            id: 'row',
-                            className: 'ID TextCenter',
-                            headerClassName: 'ID TextCenter',
-                            style: {
-                                textAlign: 'center', position: 'relative', marginTop: '1%'
-                            },
+                            className: 'text-center',
                             sortable: false,
                             filterable: false,
                             foldable: true,
                             width: 75
                         },
                         {
-                            Header: () => <div className="Header" style={{ textAlign: 'center' }} >Name</div>,
+                            Header: () => <div className="Header" >Name</div>,
                             accessor: 'name',
-                            className: 'Name TextCenter',
-                            headerClassName: 'Name TextCenter',
-                            style: {
-                                textAlign: 'center', position: 'relative', marginTop: '1%'
-                            },
+                            className: 'text-center',
                             foldable: true
                         },
                         {
                             Header: () => <div className="Header" >Email</div>,
                             accessor: 'email',
                             foldable: true,
-                            className: 'company TextCenter',
-                            headerClassName: 'company TextCenter',
-                            style: {
-                                textAlign: 'center', position: 'relative', marginTop: '1%'
-                            }
+                            className: 'text-center',
                         },
                         {
                             Header: () => <div className="Header" >Phone</div>,
                             accessor: 'phone',
                             foldable: true,
-                            className: 'company TextCenter',
-                            headerClassName: 'company TextCenter',
-                            style: {
-                                textAlign: 'center', position: 'relative', marginTop: '1%'
-                            }
+                            className: 'text-center',
                         },
                         {
                             Header: () => <div className="Header" >Action</div>,
-
                             sortable: false,
                             filterable: false,
-                            className: 'Action TextCenter',
-                            headerClassName: 'Action TextCenter',
+                            className: 'Action',
                             id: 'button',
                             width: 150,
                             Cell: (row) => {
                                 return (
-                                    <span style={{ textAlign: 'center' }}>
-                                        <IconButton onClick={() =>
-                                            this.props.history.push(
-                                                '/customer/new'
-                                            )}>
-                                            <i className="zmdi zmdi-account-add"></i>
-                                        </IconButton>
+                                    <span className="action">
                                         <IconButton
                                             onClick={() =>
                                                 this.props.history.push(
@@ -104,9 +86,7 @@ class Table extends React.Component {
                                     </span>
                                 );
                             }
-
                         },
-
                     ]}
                     pageSize={Data.length}
                     showPaginationBottom={false}

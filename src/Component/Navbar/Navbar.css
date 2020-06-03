@@ -24,26 +24,8 @@
     transform: scale(1, 1);
 }
 
-
 .MuiToolbar-regular {
     min-height: 50px !important;
 }
 
-.link {
-    /* background-color: #fff; */
-    color: black !important;
-    /* padding: 14px 25px; */
-    text-align: center !important;
-    text-decoration: none !important;
-    display: inline-block !important;
-    /* border: 1px solid #ccc!important; */
-}
-a:link, a:visited {
-    /* background-color: #fff; */
-    color: black !important;
-    /* padding: 14px 25px; */
-    text-align: center !important;
-    text-decoration: none !important;
-    display: inline-block !important;
-    /* border: 1px solid #ccc!important; */
-}
+

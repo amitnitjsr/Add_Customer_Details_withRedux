@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import ReactTable from 'react-table';
 import IconButton from '@material-ui/core/IconButton';
 import { Button } from 'reactstrap';

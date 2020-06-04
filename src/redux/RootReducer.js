@@ -1,6 +1,5 @@
 import storage from 'redux-persist/lib/storage'
 import { persistCombineReducers } from 'redux-persist'
-
 import BaseReducer from './BaseReducer';
 import customer from '../Container/Customer/Reducer';
 

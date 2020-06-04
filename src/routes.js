@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import App from './Container/home/App';
-import Customer from './Container/Customer';
+import Customer from './Container/Customer/Table';
 import AddCustomer from './Container/Customer/Add';
 import PageNotFound from './Container/PageNotFound';
 

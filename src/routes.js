@@ -9,11 +9,13 @@ import App from './Container/home/App';
 import Customer from './Container/Customer/Table';
 import AddCustomer from './Container/Customer/Add';
 import PageNotFound from './Container/PageNotFound';
+// import PreLoading from './Component/PreLoading';
 
 
 const routes = (props) => {
     return (
         <Router>
+            {/* <PreLoading /> */}
             <Switch>
                 <Route
                     exact

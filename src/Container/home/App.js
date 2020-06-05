@@ -11,15 +11,12 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>This Assignment is created by Amit Maurya. Using React js</p>
         <Link
-            to="/customer"
-          >
-        <Button>
-          
+          to="/customer"
+        >
+          <Button>
             Go to Assignment
-        
         </Button>
         </Link>
-
       </header>
     </div>
   );

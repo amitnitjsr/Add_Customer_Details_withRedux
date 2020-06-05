@@ -1,9 +1,7 @@
 import React from 'react';
-
 import { Provider } from 'react-redux'
 import { persistor, store } from './redux/Store';
 import { PersistGate } from 'redux-persist/integration/react'
-
 import Routes from './routes';
 // import PreLoading from './Component/PreLoading';
 

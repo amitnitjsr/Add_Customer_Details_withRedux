@@ -28,4 +28,13 @@
     min-height: 50px !important;
 }
 
-
+a{
+    color: #535658;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover {
+    color: #535658;
+    text-decoration: none;
+    background-color: transparent;
+}

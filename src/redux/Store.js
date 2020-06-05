@@ -1,12 +1,11 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import { persistStore } from 'redux-persist'
+import { persistStore } from 'redux-persist';
 import thunk from 'redux-thunk';
-
 import isDev from '../utils/isDev';
 import reducer from './RootReducer';
 
 export default function configureStore() {
-    let store =  createStore(
+    let store = createStore(
         reducer,
         compose(
             applyMiddleware(thunk),
